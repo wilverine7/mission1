@@ -23,11 +23,12 @@ namespace mission1_3
             for (int i = 0; i < rollCount; i++)
             {
                 
-                
+                //this generates a random number for 2 seperate die
                 int die1 = rnd.Next(1,7);
                 int die2 = rnd.Next(1, 7);
                 int num = die1 + die2;
 
+                //gets the count of each time a total is rolled
                 if (num == 2)
                 {
                     rolls[0] += 1;
@@ -77,6 +78,7 @@ namespace mission1_3
             }
             for (int i = 0; i < rolls.Length; i++)
             {
+                //calculates the percent of time a certain number was rolled
                 float percent = (((float)rolls[i] / (float)rollCount) *100);
                 for (int x = 0; x < percent; x++)
                 {
